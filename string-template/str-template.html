@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>str-template</title>
+    </head>
+    <body>
+        <!-- String template di JavaScript diperkenalkan sejak ES6 dan menggunakan template literals, 
+            yang ditandai dengan backticks (`). 
+            Fitur ini memungkinkan interpolasi 
+            string dengan sintaks ${expression} 
+            untuk menyisipkan nilai atau hasil ekspresi ke dalam string.-->
+        <script>
+            const name = "Fiercest Handsome BOY";
+            const template = `Name : ${name}`;
+            document.writeln(template);
+
+            let namaDepan = "Fiercest";
+            let namaTengah = "Fullstack";
+            let namaBelakang = "Developers";
+            // menggunakan template string
+            let tempalteBaru = `${namaDepan} ${namaTengah} ${namaBelakang}`;
+            document.writeln(`<br><br> ${tempalteBaru}`);
+            // menggunakan string biasa
+            let stringLama = namaDepan + " " + namaTengah + " " + namaBelakang;
+            document.writeln(`<br> ${stringLama}`);
+
+            // menyisipkan ekspresi dalam string template ${nilai >70}
+            const nilai = 80;
+            const siswa = `Nama : ${name}, lulus : ${nilai > 70}`;
+            document.writeln(`<br>${siswa}`);
+
+            // multiline string backtik(`suppoort multi line`), petik "tidak support multiline"
+            let multilineString = `hai hello hi whazap
+            Hai Semua gw kembali lagi,
+            Jangan lupa untuk mengingat muka gw yang ganteng ini,
+            bye dan terima kasih.
+            `;
+            document.writeln("<pre>");
+            document.writeln(multilineString);
+            document.writeln("</pre>");
+
+            let tester = `halow
+            <br> 
+            test aja
+
+            `;
+            document.writeln(`${tester}`);
+            console.log(tester);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>isNaN</title>
+    </head>
+    <body>
+        <!-- isNaN(Number)
+        Function yang digunakan untuk Mengecek sebuah number itu NaN atau Bukan
+        hasil cek berupa data boolean . true jika NaN dan False jika bukan Nan
+        -->
+
+        <script>
+            let ikan = Number("fish adalah ikan"); //NaN not a number
+            let totalIkan = ikan + 100;
+            document.writeln(totalIkan); //NaN karena NaN di tambakan dengan number.
+
+            // cek data ikan adalah number atau NaN
+            document.write(`<br> ${isNaN(ikan)}`); //true jika nan dan false jika bukan nan
+            document.writeln(`<br> ${isNaN("2")}`); //false karena yang dicek data number yaitu 2
+        </script>
+    </body>
+</html>

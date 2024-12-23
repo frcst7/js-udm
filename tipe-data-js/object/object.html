@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tipe Data-Object</title>
+    </head>
+    <body>
+        <script>
+            // object kosong {}
+            let person = {};
+            // mengubah property(atribut) di object
+            // menambahkan
+            person["nama"] = "Fiercest";
+            person["alamat"] = "Indonesia";
+            person["umur"] = 27;
+            console.table(person);
+            // menghapus object
+            delete person["umur"];
+            console.table(person);
+
+            let dataDiri = {
+                "nama lengkap": "Dino Cat",
+                alamat: "indonesia",
+                umur: 2,
+            };
+
+            console.table(dataDiri);
+
+            // mengakses atribut (property), variable.property
+            console.log(`Nama : ${dataDiri["nama lengkap"]} `);
+            console.log(`alamat : ${dataDiri.umur}`);
+            console.log(`umur : ${dataDiri.umur} tahun`);
+        </script>
+    </body>
+</html>

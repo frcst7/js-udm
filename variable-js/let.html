@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Let variable Javascript</title>
+    </head>
+    <body>
+        <!-- 1.variable adalah tempat menyimpon data 
+            2.javascript adalah dynamic language artinya, 
+            variabel di javascript tidak terpaku harus menggunakan satu tipe data,kita bisa mengubah ubah tipe data di variable yang sama
+            3.variable tidak boleh mengandung spasi
+            4.let digunakan untuk menganti var
+            5.data let bisa diubah.
+        -->
+        <script>
+            // declarasi variable
+            let fullName;
+            let firstName;
+            let middleName;
+            let lastName;
+            // mengubah data/value  variable
+            fullName = "the fiercest developer";
+            firstName = "the";
+            middleName = "fiercest";
+            lastName = "developer";
+
+            document.writeln(fullName);
+
+            // membuat variable langsung dengan valuenya
+            // var variablenya = value
+            document.writeln("<br>");
+            let namaDepan = "Our";
+            let namaBelakang = "Parrot";
+            let namaLengkap = namaDepan + " " + namaBelakang;
+            document.writeln(namaLengkap);
+        </script>
+    </body>
+</html>

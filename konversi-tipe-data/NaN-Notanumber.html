@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NaN - Not a Number</title>
+    </head>
+    <body>
+        <!-- 
+            1.jika data string yang kita coba lakukan konversi bukanlah data valid, 
+            maka hasil dari konversi tersebut adalah NaN 
+            2.NaN adalah number spesial yang menyebutkan bahwa ini bukanlah number
+            3.Jika NaN dioperasikan dengan data number lainnya makan hasilnya akan menjadi NaN lagi
+        -->
+
+        <script>
+            // contoh benar
+            document.writeln(parseFloat(1.1));
+            // NaN
+            document.writeln(parseFloat("e1.2"));
+            document.writeln(parseFloat("1.2diabaikan")); //jika kesalahan dibelakang maka diabaikan
+            // NaN jika ada kesalahan didepan maupun dibelakan
+            document.writeln(Number("e2"));
+
+            // Nan di operasikan dengan data apapun akan menghasilkan NaN
+            let value1 = Number("salah"); //bernilai NaN
+            let value2 = 2;
+
+            let hasil = value1 + value2;
+            document.writeln(`<br> ${hasil}`);
+        </script>
+    </body>
+</html>

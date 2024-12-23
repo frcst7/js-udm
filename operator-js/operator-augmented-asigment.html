@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Operator Augmented</title>
+    </head>
+    <body>
+        <!-- Operator Augmented Asigment (tambahkan 1 pada variable result)
+
+                melakukan operasi aritmatika terhadap dirinya sendiri
+
+                let result = 10
+
+                result += 1
+
+                Penambahan : =+
+
+                Pengurangan : = -
+
+                Perkalian : =*
+
+                Perpangkatan : =**
+
+                Pembagian : =/
+
+                Sisa Bagi atau Modulo : =% -->
+        <script>
+            let result = 1 + 2; //output 3
+            document.writeln("<p> 1 + 2 = " + result + "</p>");
+            let originalResult = result;
+
+            // Operator Augmented Asigments
+            result -= 1; //output 2
+            document.writeln("<p>" + originalResult + " " + "- 1" + " = " + result) + "</p>";
+            originalResult = result;
+
+            // Operator Augmented Asigments
+            result *= 2; //output 4
+            document.writeln("<p>" + originalResult + " * 2" + " = " + result + "</p>");
+        </script>
+    </body>
+</html>

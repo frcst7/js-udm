@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Konversi data string ke number</title>
+    </head>
+    <body>
+        <!-- Function 
+             ParseInt('string'/var-string) = mengkonversi dari string ke number (bil-bulat)
+             parseFloat('string'/var-string) = mengkonversi dari string ke number (bil-pecahan)
+             Number('string'/var-string) = mengkonversi dari string ke number (bil- bulat/pecahan)
+             number.toString() = mengkonversi dari number ke srting
+        -->
+        <script>
+            let value1 = "1"; //string
+            let value2 = 1; //number
+
+            // output 11, karena number pada value2 dianggap string secara default
+            // ketika dioperasikan dengan string
+            document.writeln(`${value1}${value2}`);
+
+            //output 2 karena value 1 sudah dikonverts kebilangan number
+            let value3 = parseInt(value1) + value2;
+            document.writeln(`<br>${value3}`);
+
+            let nilai1 = "10";
+            let nilai2 = "1.1";
+
+            // print nilai 1 kedalam number dan print nilai 2 ke dalam floating number
+            document.writeln("<br>", parseInt(nilai1));
+            document.writeln("<br>", parseFloat(nilai2));
+        </script>
+    </body>
+</html>

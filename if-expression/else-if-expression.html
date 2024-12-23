@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Else - if expression</title>
+    </head>
+    <body>
+        <!-- else if expression 
+            *digunakan untuk mencari nilai pada banyak percabangan.
+            *akan mengecek nilai true pada cabang pertama sampai keakhir (dari atas kebawah), 
+            *jika cabang pertama bernilai false akan kecabang bawahnnya sampai bernilai true.
+            *jika nilainya false semua maka akan di eksekusi pada block else. atau cabang akhir.
+            *jika semua cabang bernilai true, maka yang di eksekusi adalah cabang pertama dan program stop disitu (hasil output hanya pada cabang pertama)
+        -->
+
+        <script>
+            const nilai = 90; //nilai yang dimiliki
+
+            //bernilai true, maka program stop dan menampilkan output if, jika pada if bernilai false,
+            // maka akan mencari true pada nilai bawahnya sampai dapat
+            if (nilai > 80) {
+                document.writeln(`kamu mendapatkan predikat : A`);
+            }
+            // bernilai false
+            else if (nilai > 60) {
+                document.writeln(`kamu mendapatkan predikat : B`);
+            }
+            // bernilai false
+            else {
+                document.writeln(`kamu gagal, coba lagi lain kesempatan`);
+            }
+        </script>
+    </body>
+</html>

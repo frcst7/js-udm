@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Data-array</title>
+    </head>
+    <body>
+        <!-- 
+        *Data Array* varArray["value1","value2","value3", 2 , 3]
+        tipe data yang berisikan kumpulan data
+        array di js memiliki sifat dinamis , 
+        artinya data nya bisa bertambah dengan sendirinya saat kita memasukan data ke dalam array
+        *Array dalam Array ["value , value2, value3 , 2, 3"]
+        disebut multidimensi atau nested array, mengakses data array dalam array , variableArray[indexke],[data ke]
+        
+        
+            !cara kerja array
+            *setiap data di array akan di simpan dalam posisi berurutan. 
+            *urutan pertama dimulai nomor 0, urutan diarray disebut index 
+            *menambahkan data array baru akan diposisikan di index akhir
+            *panjang array isi total keseluruhan data array
+
+        -->
+
+        <script>
+            let arrayKosong = [];
+            // data array bisa string /number
+            // gunakan ,(koma) untuk pemisah dan memasukan dataarray lebih dari 1
+            let arrayName = ["fiercest", "seven", "piker"];
+            document.writeln("<br>" + arrayName);
+
+            // menambakan data array, gunakan funct .push()
+            // gunakan , jika data lebih dari 1 .push("data1","data2")
+            arrayName.push("kenzo");
+            document.writeln("<br>" + arrayName);
+            console.table(arrayName); //cetak dalam bentuk tabel
+            arrayName.push("Yono", "Joko", "Mul");
+            console.table(arrayName);
+
+            // * operasi di array
+            // array.push(value) = menambakan data ke array
+            document.writeln(
+                `<br> menambakan data array baru pada variable array Kosong sebanyak: ${arrayKosong.push("Molly")} yaitu :${arrayKosong}`
+            );
+            arrayKosong.push("Dino", "Russel", "Molly");
+            document.writeln(`<br>Menambahkan data array baru yaitu : ${arrayKosong}`);
+
+            // array.length = untuk mendapatkan panjang array
+            document.writeln(`<br> Panjang Data Array : ${arrayName.length}`);
+
+            // array.[index] = mendapatkan data di posisi index
+            document.writeln(`<br> data pada index ke 2 arrayKosong ialah : ${arrayKosong[2]}`);
+            // array[index] = value = mengubah data di posisi index
+            arrayName[6] = "Mulyonoq";
+            document.writeln(`<br> data baru pada arrayName di index ke 6 adalah : ${arrayName[6]}`);
+
+            // delete array[index] = menghapus data di posisi index, namun index tidak bergeser
+            delete arrayName[6];
+            document.writeln(`<br> Index ke 6nya sekarang kosong, berikut data yang tersedia ${arrayName}`);
+        </script>
+    </body>
+</html>
