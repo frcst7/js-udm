@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nested Function Scope</title>
+    </head>
+    <body>
+        <script>
+            // local scope hanya dapat di panggil didalam fungsi
+            //function first
+            function first() {
+                //local scope function first
+                let firstVariable = "First Local Scope";
+
+                //nested function dapat mengakses local scope diatasnya,
+                function firstNested() {
+                    console.log(firstVariable);
+                }
+                firstNested();
+
+                function secondNested() {
+                    console.log(firstVariable);
+                }
+                secondNested();
+            }
+            //globa scope
+            first();
+        </script>
+    </body>
+</html>

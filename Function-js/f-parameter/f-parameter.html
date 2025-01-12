@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Function-Parameter</title>
+    </head>
+    <body>
+        <script>
+            //parameter pada function untuk menampung nilai yang dikirim oleh Argument function ketika dipanggil
+            //defaultnya kosong, dan juga bisa diberikan nilai langsung pada parameternya
+            //parameter bisa di isi lebih dari satu, dipisah dengan tanda koma
+
+            function sayHello(firstName, lastName) {
+                document.writeln(`<p>Hello ${firstName} ${lastName}<p/>`);
+            }
+            // argument mengirim nilai ke parameter
+            sayHello("Fiercest", "Handsome"); //mengirim nilai fircest ke parameter firstname handsome ke parameter lastname
+            sayHello("Budi", "Nugraha");
+        </script>
+    </body>
+</html>

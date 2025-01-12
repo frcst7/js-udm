@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Function Generator</title>
+    </head>
+    <body>
+        <script>
+            //1.function generator
+            function* buatName() {
+                yield "Fiercest", yield "Handsome";
+                yield "boy";
+            }
+            const names = buatName();
+            //element itu adalah nilai individu yang disimpan didalam aray
+            for (const element of names) {
+                console.log(element);
+            }
+
+            //2. buat generator function ganjil
+            // function generator bersifat lazy evaluation
+            // Lazy evaluation adalah pendekatan di mana ekspresi atau perhitungan hanya dilakukan ketika dibutuhkan
+
+            function* buatGanjil(value) {
+                for (let i = 1; i <= value; i++) {
+                    if (i % 2 === 1) {
+                        console.log(`yield ${i}`);
+                        yield i;
+                    }
+                }
+            }
+
+            const numbers = buatGanjil(100);
+            // for (const nomor of numbers) {
+            //     console.log(nomor);
+            // }
+            console.log(`--------------------------------------------------------`);
+            console.log(numbers.next().value);
+            console.log(numbers.next().value);
+            console.log(`--------------------------------------------------------`);
+
+            //jika menggunakan array biasa bersifat eager evaluation
+            //Eager evaluation (atau strict evaluation)
+            //adalah pendekatan di mana ekspresi atau perhitungan dilakukan sejak awal
+            function* buatGenap(genap) {
+                const hasil = [];
+                for (let j = 1; j <= genap; j++) {
+                    if (j % 2 === 0) {
+                        console.log(`yield ${j}`);
+                        hasil.push(j);
+                    }
+                }
+            }
+
+            const angka = buatGenap(100);
+            for (const angkaGenap of angka) {
+                console.log(angkaGenap);
+            }
+        </script>
+    </body>
+</html>

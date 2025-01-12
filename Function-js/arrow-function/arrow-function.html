@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Arrow-Function</title>
+    </head>
+    <body>
+        <script>
+            // arrow function
+            const sayHello = (nama) => {
+                const say = `Hello ${nama}`;
+                document.writeln(`<p>${say}</p>`);
+            };
+            sayHello("fiercest");
+
+            //arrow function versi tanpa blok code {}
+            const hi = (name) => document.writeln(`Hi hay ${name}`);
+            hi("putri");
+
+            // return value
+            const sum = (sum1, sum2) => {
+                return sum1 + sum2;
+            };
+            document.writeln(`<p>${sum(100, 10)}</p>`);
+
+            // return value arrow function
+            // tidak perlu kata kunci return untuk mengembalikan valuenya
+            const jumlah = (angkaA, angkaB) => angkaA + angkaB;
+            document.writeln(`<p>Hasil : ${jumlah(100, 20)}</p>`);
+
+            // arrow function 1 parameter boleh tanpa ()
+            const satuParameter = (satu) => document.writeln(`<p>Woi ${satu}</p>`);
+            satuParameter("Paok");
+
+            // arrow anonymous function
+            function nickName(callback) {
+                callback("MystLight");
+            }
+            nickName((namaPanggil) => document.writeln(`Hi : ${namaPanggil}`));
+        </script>
+    </body>
+</html>

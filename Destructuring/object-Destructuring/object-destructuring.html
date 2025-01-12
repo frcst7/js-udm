@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Desctructuring Objects</title>
+    </head>
+    <body>
+        <script>
+            //nama variable pada descturturing object harus sama dengan property di obj nya
+            const person = {
+                namaDepan: "fiercest",
+                namaBelakang: "handsome",
+                address: {
+                    jalan: "jl.jalan", //nested obj
+                    kota: "Jakarta", //nested obj
+                    negara: "indonesia", //nested obj
+                },
+                Hobby: "Game",
+                channel: "fiercestYTChannel",
+            };
+            // destructuring pada object
+            // jika inging mengakses yang desctructuring nested gunakan,
+            // address:{jalan,kota,negara}, *catatan parentnya(si adress) tidak bisa diakses lagi,
+            const {
+                namaDepan,
+                namaBelakang,
+                address: { jalan, kota, negara },
+                ...sisaan
+            } = person;
+            console.log(namaDepan); //outputnya fiercest
+            console.log(namaBelakang); //outputnya handsome
+            console.log(jalan); // outputnya jl jalan
+            console.log(kota); // outputnya jakarta
+            console.log(negara); // outputnya indonesia
+            console.log(sisaan); // outputnya {Hobby: 'Game', channel: 'fiercestYTChannel'}
+        </script>
+    </body>
+</html>

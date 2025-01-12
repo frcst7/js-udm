@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>This pada javascript</title>
+    </head>
+    <body>
+        <script>
+            console.log(this);
+            function contoh() {
+                console.log(this);
+            }
+            contoh();
+
+            const person = {
+                name: "fiercest",
+                sayHello: function (value) {
+                    console.log(`Hallo ${value}, My name is ${this.name}`);
+                },
+            };
+
+            person.sayHello("budi");
+        </script>
+    </body>
+</html>

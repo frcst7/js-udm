@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Operator Logika Non - Boolean</title>
+    </head>
+    <body>
+        <!-- Operator OR || 
+        *Operator OR (||), membaca dari kiri kekanan
+        *Operator ini akan mengambil nilai pertama truthy
+        *Jika tidak ada satupun yang bernilai truthy maka nilai yang terakhir yang akan diambil (kanan)
+        
+        
+        ! jika 22nya bernilai true maka outpunya adalah nilai true yang pertama
+        ! jika 22nya bernilai false maka outputnya adalah nilai false yang terakhir
+        ! jika nilai pertama false maka output selanjutnya yang akan diambil
+        
+    -->
+        <script>
+            console.log("hello" || ""); //outpunya hello karena yang bernilai truty(true) hello
+            console.log("" || []); //outpunya [], 22nya bernilai falsey(false), maka yang diambil yang terakhir
+            console.log("0" || "nol"); //outpunya 0, 22nya bernilai truty maka yang diambil yang pertama
+            console.log(null || "NULL"); // outpunya NULL, karane null pertama bernilai false, maka output terakhir yang diambil
+            console.log(undefined || "UNDEFINED");
+
+            const person = {
+                firstName: "Fiercest",
+                lastName: "Handsome",
+            };
+
+            const name = person.firstName || person.lastName;
+            console.log(name);
+        </script>
+    </body>
+</html>

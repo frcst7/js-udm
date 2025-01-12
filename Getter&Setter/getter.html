@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Getter dan setter</title>
+    </head>
+    <body>
+        <script>
+            // Membuat objek 'person' dengan properti dan metode khusus
+            const person = {
+                firstName: "fiercest", // Properti 'firstName' berisi nama depan
+                lastName: "HandsomeBoy", // Properti 'lastName' berisi nama belakang
+
+                // Getter 'fullName': Menggabungkan firstName dan lastName menjadi satu string
+                get fullName() {
+                    return `${this.firstName} ${this.lastName}`;
+                },
+                // Setter 'fullName': Memisahkan string yang diterima menjadi firstName dan lastName
+                set fullName(value) {
+                    const array = value.split(" "); // Membagi string berdasarkan spasi
+                    this.firstName = array[0]; // Elemen pertama menjadi firstName
+                    this.lastName = array[1]; //Elemen kedua menjadi lastName
+                },
+            };
+            // Memanggil setter 'fullName' untuk mengubah nama lengkap menjadi "Budi Nugraha"
+            person.fullName = "Budi Nugraha";
+            console.table(person); // Menampilkan isi objek 'person' dalam bentuk tabel di konsol
+
+            person.fullName = "Apex Budi"; // Mengubah nama lengkap menjadi "Apex Budi" menggunakan setter
+            console.table(person); // Menampilkan isi objek 'person' yang diperbarui dalam bentuk tabel di konsol
+        </script>
+    </body>
+</html>

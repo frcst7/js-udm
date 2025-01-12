@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Function Dalam Function</title>
+    </head>
+    <body>
+        <script>
+            // Definisikan fungsi luar
+            function luar() {
+                // Fungsi dalam didefinisikan di dalam fungsi luar
+                function dalam() {
+                    console.log("inner"); // Menampilkan teks "inner" di console
+                }
+                // Panggil fungsi dalam untuk pertama kali
+                dalam();
+                // Panggil fungsi dalam untuk kedua kali
+                dalam();
+            }
+            // Panggil fungsi luar untuk memulai eksekusi
+            luar();
+        </script>
+    </body>
+</html>

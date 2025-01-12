@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Undefined</title>
+    </head>
+    <body>
+        <!-- undefined data yang belum di isikan datanya -->
+        <script>
+            // variable tanpa nilai maka datanya undefined
+            let name;
+            if (name === undefined) {
+                alert("Undefined");
+            } else {
+                alert("Defined");
+            }
+
+            // undefined pada array value (data nilai pada array tidak ada)
+            let namaNasabah = ["Bela", "Moza"];
+            if (namaNasabah[2] === undefined) {
+                alert(`Array Undefined`);
+            } else {
+                alert(`Defined`);
+            }
+            // undefined pada object,
+            const person = {};
+            if (person.name === undefined) {
+                alert(`Object Undefined`);
+            } else {
+                alert(`object define`);
+            }
+        </script>
+    </body>
+</html>

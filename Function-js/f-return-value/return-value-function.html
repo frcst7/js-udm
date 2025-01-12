@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Return Value</title>
+    </head>
+    <body>
+        <!-- Pernyataan return menghentikan eksekusi suatu fungsi dan mengembalikan sebuah value / (nilainya) ke function. -->
+        <!-- return, bisa mengembalikan nilai string langsung, var, function, array -->
+        <!-- hasil dari return harus ditampung pada variable baru -->
+        <script>
+            // Fungsi untuk menggabungkan nama depan dan nama belakang
+            function sayHello(namaDepan, namaBelakang) {
+                const say = `${namaDepan} ${namaBelakang}`; // Menggabungkan string
+                return say; //// Mengembalikan hasil gabungan atau mengembalikan data (value) di ikuti data yang ingin dikembalikan
+            }
+
+            // Memanggil fungsi sayHello dan menampung hasilnya
+            const result = sayHello("Fiercest", "Handsome"); // argument (memberikan nilai) untuk function
+            document.writeln(`<p>${result}</p>`); // Menampilkan hasil pada halaman
+
+            // Fungsi untuk menentukan nilai akhir berdasarkan skor
+            function getFinalScore(nilai) {
+                if (nilai > 90) {
+                    return "A";
+                } else if (nilai > 80) {
+                    return "B";
+                } else if (nilai > 70) {
+                    return "C";
+                } else if (nilai > 60) {
+                    return "D";
+                } else {
+                    return "Tidak Lulus";
+                }
+            }
+            // Menentukan nilai akhir untuk skor tertentu
+            let hasilNilai = getFinalScore(20);
+            // Menampilkan hasil nilai akhir
+            document.writeln(`<p>${hasilNilai}</p>`);
+
+            // Fungsi untuk mencari nilai dalam array
+            function isContain(array, searchValue) {
+                // Iterasi setiap elemen dalam array
+                for (const element of array) {
+                    console.log(`Iterasi Element ${element}`); // Menampilkan elemen yang sedang diiterasi
+                    if (element === searchValue) {
+                        return true; // Jika nilai ditemukan
+                    }
+                }
+                return false; //jika nilai tidak di temukan
+            }
+
+            // membuat data arraynya
+            const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 123, 144, 325, 43, 64, 63];
+            const search = 10; //value yang ingin dicari
+
+            // Memanggil fungsi isContain untuk memeriksa keberadaan nilai
+            let found = isContain(array, search);
+            // Menampilkan hasil pencarian
+            document.writeln(`data arraynya adalah ${found}`);
+        </script>
+    </body>
+</html>

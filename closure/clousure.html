@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Clousure</title>
+    </head>
+    <body>
+        <!-- membundle sebuah function dan variable pendukung disekitar local scope keluar dari scope semestinya -->
+        <script>
+            function createdaAdder(value) {
+                const owner = "enga"; // Variabel lokal di dalam fungsi createdaAdder
+                function add(param) {
+                    // Fungsi dalam (inner function)
+
+                    console.info(owner); // Mengakses variabel di fungsi luar
+                    return value + param; // Menggunakan parameter dari fungsi luar
+                }
+                return add; // Mengembalikan fungsi add
+            }
+            const addTwo = createdaAdder(2); // Memanggil fungsi luar, mengembalikan fungsi add
+            console.log(addTwo(10)); //outputnya enga \n 12
+
+            const addSepuluh = createdaAdder(1);
+            console.log(addSepuluh(10)); //outputnya enga \n 11
+
+            const
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nullish Coalescing</title>
+    </head>
+    <body>
+        <!-- Nullish Coalescing
+            ! operator nulish (??), bernilai null dan undefined.
+            ! jika parameternya bernilai null / undefined maka yang ditampilkan adalah value dari nulishcoalescing
+            ! jika parameternya bernilai maka yang ditampilkan adalah nilai dari parametrnya
+            
+         -->
+        <script>
+            let parameter;
+            let data = parameter ?? "nilai default";
+            document.writeln(`${data}`);
+        </script>
+    </body>
+</html>

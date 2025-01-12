@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Default value Destructuring</title>
+    </head>
+    <body>
+        <script>
+            //default value , ='isi defaultnya'
+            const buah = ["apple", "jeruk"];
+            const [merah, orange, ijo = "alpukat"] = buah;
+            console.log(merah); // output apple
+            console.log(orange); // output jeruk
+            console.log(ijo); // outputnya alpukat walau di array ga di isi
+        </script>
+    </body>
+</html>

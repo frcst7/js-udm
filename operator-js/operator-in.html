@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Operator In</title>
+    </head>
+    <body>
+        <!--    *untuk mengecek sebuah apakah property ada di dalam sebuah object atau tidak 
+                *jika ada hasilnya true dan jika tidak maka hasilnya false
+                *in operator juga bisa di gunakan untuk mengecek index array
+                !in operator hanya akan mengecek index array atau object propertynya saja, tidak dengan valuenya.
+                !jadi walaupn nilai property object atau index array undefined dan null maka tetap dianggap ada
+        -->
+        <script>
+            // in operator hanya cek property di object dan index pada array.
+            // tidak peduli dengan valuenya
+
+            // cek property pada object
+            let person = {
+                firstName: "fiercest",
+                lastName: "developer",
+            };
+
+            let result = "firstName" in person; //true
+            document.writeln(`${result}`);
+
+            // cek property pada object
+            let warna = {
+                primary: "red",
+                second: "black",
+            };
+
+            let hasilWarna = "third" in warna; //false karna tidak ada property third pada object
+            document.writeln(`<br> ${hasilWarna}`);
+
+            // cek index array
+            let dataArray = ["rosy", null, undefined];
+            let resultArray = [1] in dataArray;
+            document.writeln(`<br> ${resultArray}`);
+        </script>
+    </body>
+</html>

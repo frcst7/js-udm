@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Scope</title>
+    </head>
+    <body>
+        <!-- !global bisa diakses local -->
+        <!-- !local tidak bisa diakses global -->
+        <script>
+            // Variabel counter didefinisikan di global scope, dapat diakses di mana saja
+            let counter = 0;
+
+            // Fungsi global hitMe, dapat diakses di mana saja
+            function hitMe() {
+                // local scope untuk fungsi hitMe
+                // Setiap kali fungsi ini dipanggil, nilai counter bertambah 1
+                counter++;
+            }
+
+            // Fungsi global other, saat ini tidak melakukan apa-apa
+            function other() {
+                // local scope untuk fungsi other
+                // Fungsi ini bisa diisi dengan logika tambahan jika diperlukan
+            }
+
+            // Memanggil fungsi hitMe pertama kali, counter akan bertambah menjadi 1
+            hitMe();
+
+            // Memanggil fungsi hitMe kedua kali, counter akan bertambah menjadi 2
+            hitMe();
+
+            // Menampilkan nilai counter di konsol (hasil akhirnya adalah 2)
+            console.log(counter);
+
+            function first() {
+                let firstValriable = "first"; //local scope first
+                console.log(firstValriable); //berhasil karena variable diakses didalam local scope itu sendiri
+            }
+
+            function second() {
+                let secondVariable = "second"; //local scope second
+                console.log(firstValriable); // error karna mengakses variable local scope milik first
+            }
+
+            first();
+            second();
+
+            //global scope atau diluar scope functionnya
+            console.log(firstValriable); //error karena local scope tidak dapat diakses pada global scope
+            console.log(secondVariable); //error karena local scope tidak dapat diakses pada global scope
+        </script>
+    </body>
+</html>

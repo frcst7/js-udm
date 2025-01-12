@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>destructuring</title>
+    </head>
+    <body>
+        <script>
+            const names = ["fiercest", "handsome", "boy", "joko", "budbud"];
+            // destructuring array.
+            const [firstName, middleName, lastName, ...danlainlain] = names;
+            console.log(names); //output : ['fiercest', 'handsome', 'boy', 'joko', 'budbud']
+            console.log(firstName); //output : fiercest (destructuring)
+            console.log(middleName); //output: handsome (destructuring)
+            console.log(lastName); //output: boy (destructuring)
+            console.log(danlainlain); //outout : budi, joko
+        </script>
+    </body>
+</html>

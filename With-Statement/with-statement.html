@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>With Statement Object</title>
+    </head>
+    <body>
+        <!-- !mengakses property object tanpa memanggil variable objectnya -->
+
+        <script>
+            const person = {
+                firstName: "Fiercest",
+                middleName: "Handsome",
+                lastName: "Boy",
+            };
+            // pemanggilan propert pada object secara normal tanpa with statement
+            document.writeln(`<p>${person.firstName} </p>`);
+
+            // pemanggilan properti object dengan with person
+            // tapi pemanggilan with tidak di rekomendasikan digunakan
+            // karena with statement membuat sebuah kode jadi ambigu
+            with (person) {
+                document.writeln(`<p>${firstName} </p>`);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Do-While-Loops</title>
+    </head>
+    <body>
+        <!-- !Do-While-Loops 
+    *Perulangan yang mirip dengan while
+    *perbedaannya hanya pada pengecekan kondisi
+    *pengecekan kondisi di while-loops dilakukan di awal sebelum perulangan dilakukan, sedangkan di do while loop dilakukan setaelah perulangan dilakukan
+    *oleh karena itu dalam do while loop, minimal pasti sekali perulangan dilakukan walaupun kondisi tidak bernilai true
+    -->
+
+        <script>
+            //block do akan dieksekusi terlebih dahulu dan belum dicek kondisinya
+            //setelah block do dieksekusi baru dicek ke kondisi statemnt
+            //setelah di cek kondisinya bernilai true maka do lagi, jika false selesai
+
+            let i = 1;
+            do {
+                document.writeln(`<p>Perulangan ${i}</p>`);
+                i++;
+            } while (i <= 10); //kondisi statement
+        </script>
+    </body>
+</html>

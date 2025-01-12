@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Operator && non boolean</title>
+    </head>
+    <body>
+        <!-- kembalikan dari operator OR non boolean
+            
+            !Operator && non boolean mengambil nilai pertama falsey.
+            !jika nilai pertama Truty dan nilai kedua Falsey maka yg diambil nilai kedua
+            !Dibaca dari kiri ke kanan
+            -->
+
+        <script>
+            console.log(0 && "String");
+            console.log("string" && 0);
+            console.log("truty satu" && "truty dua");
+            console.log(1 && 2);
+        </script>
+    </body>
+</html>

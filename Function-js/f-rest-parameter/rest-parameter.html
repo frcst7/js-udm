@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Function Rest Parameter</title>
+    </head>
+    <body>
+        <!-- Rest para meter mengirim value data sebanyak banyaknya -->
+        <!-- data tsb otomatis di konversi menjadi array -->
+        <!--!Ketentuan -->
+        <!-- ...RestParameter -->
+        <!-- hanya ada boleh 1 rest parameter di dalam function -->
+        <!-- rest parameter harus berada di posisi akhir -->
+
+        <script>
+            function sums(name, ...data) {
+                let total = 0;
+                // const item tempat penampung sementara
+                for (const item of data) {
+                    total += item;
+                }
+                document.writeln(`<p>Total ${name} is ${total}</p>`);
+            }
+            // Memanggil function sums dengan banyak argumen
+            sums("Oranges", 20, 10, 20, 20, 20);
+
+            //spread syntax.
+            // konversi dari array kedalam rest parameter
+            let values = [10, 20, 10, 20, 40];
+            sums("konversi data array", ...values);
+
+            // Arguments Object fitur lama sebelum rest parameter
+            function oldSum() {
+                let total = 0;
+                for (const argument of arguments) {
+                    total += argument;
+                }
+                console.log(`<p>Total is ${total}</p>`);
+            }
+            oldSum(1, 2, 3, 4, 5);
+        </script>
+    </body>
+</html>

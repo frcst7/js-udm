@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nama Variable Property Object</title>
+    </head>
+    <body>
+        <script>
+            const person = {
+                firstName: "Syafira",
+                middleName: "khanza",
+                lastName: "soleha",
+            };
+            // destucturing simpan pada variable lain
+            let { firstName: namaDepan, middleName: namaTengah, lastName: namaBelakang } = person;
+            console.log(namaDepan);
+            console.log(namaTengah);
+            console.log(namaBelakang);
+        </script>
+    </body>
+</html>

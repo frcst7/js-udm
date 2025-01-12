@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Function Sebagai value</title>
+    </head>
+    <body>
+        <script>
+            //buat terlebih dahulu functionnya, lalu masukan ke variable
+            //cara panggilnya bisa melalui functionnya di ikuti argumentny atau variable dengan argumentnya
+
+            // Definisi fungsi
+            function sayHellow(name) {
+                document.writeln(`<p>Hello ${name}</p>`);
+            }
+            // Memanggil fungsi secara langsung
+            sayHellow("Fiercst");
+
+            // memasukan function kedalam variable
+            const say = sayHellow;
+
+            // Memanggil fungsi melalui variabel
+            say("Budi");
+
+            // Fungsi yang menerima callback
+            function giveMeName(callback) {
+                callback("Fiercest");
+            }
+            // Memanggil fungsi dengan callback
+            giveMeName(sayHellow);
+            giveMeName(say);
+        </script>
+    </body>
+</html>
